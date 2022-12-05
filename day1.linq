@@ -20,9 +20,8 @@ void Main()
 		}
 	}
 	//After done parsing, sort collection and output sorted list
-	calorieCount = calorieCount.OrderBy(n => n)
-							   .ToList().Dump ("Calories by Elves");
+	calorieCount = calorieCount.OrderBy(n => n).ToList().Dump ("Calories by Elves");
+	//part 2						   
+	int bigThree = calorieCount.OrderBy(n => n).TakeLast(3).Sum().Dump ("Top 3 Elves Added");
 
 }
-
-// You can define other methods, fields, classes and namespaces here
